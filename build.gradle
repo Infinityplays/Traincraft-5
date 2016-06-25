@@ -41,6 +41,12 @@ minecraft {
     replace "@VERSION@", config.modVersion.toString()
 }
 
+allprojects {
+    apply plugin: 'java'
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
+
 dependencies {
     deobfCompile "mezz.jei:jei_" + config.minecraftVersion.toString() + ":" + config.jeiVersion.toString()
 }
